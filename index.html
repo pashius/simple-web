@@ -127,6 +127,14 @@
     background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:20px;
     border:1px solid #eef3f6;
   }
+  .card h3 .icon{
+  font-size:1.2em;
+  }
+ .card h3{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  }
   @media (max-width:960px){ .hero .wrap{grid-template-columns:1fr} }
 
   /* Sections */
@@ -137,12 +145,16 @@
   @media (max-width:1000px){ .grid-5{grid-template-columns:repeat(2,1fr)} }
   @media (max-width:640px){ .grid-3{grid-template-columns:1fr} .grid-5{grid-template-columns:1fr} }
 
-  .dept{padding:18px}
-  .dept h3{margin:.2rem 0 .4rem; font-size:1.05rem}
-  .dept p{margin:0; color:var(--muted); font-size:.95rem}
-
+ .dept h3{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.dept h3 .icon{
+  font-size:1.2em;
+}
   .patients .info{
-    display:grid; gap:16px; grid-template-columns:1.2fr .8fr;
+    display:grid; gap:16px; grid-template-columns:1.2fr .8fr; 
   }
   .patients .box{padding:18px}
   .list{margin:0; padding-left:18px}
@@ -196,9 +208,7 @@
     <div class="container wrap">
       <div>
         <h1 align="center">Рятуємо. Лікуємо. Допомагаємо.</h1>
-        <h3 align="center">
-            Невпинно дбаємо про тих, хто стоїть за нас.
-        </h3>
+        <h3 align="center">Невпинно дбаємо про тих, хто стоїть за нас.</h3>
       </div>
       <div class="card">
         <h3 style="margin-top:0">Коротко про нас</h3>
@@ -218,17 +228,19 @@
       <h2>Відділення</h2>
       <div class="grid-5">
         <div class="card dept">
-          <h3>Діагностичний цикл</h3>
-          <p>Щось про діагностику</p>
-        </div>
-        <div class="card dept">
-          <h3>Терапевтичний цикл</h3>
-          <p>Щось про терапію</p>
-        </div>
-        <div class="card dept">
-          <h3>Хірургічний цикл</h3>
-          <p>Щось про хірургію</p>
-        </div>
+      <h3>Діагностичний цикл <img src="icons/cardiogram.png" class="icon"></h3>
+      <p>Щось про діагностику</p>
+    </div>
+
+    <div class="card dept">
+      <h3>Терапевтичний цикл <img src="icons/intensive-care_unit.png" class="icon"></h3>
+      <p>Щось про терапію</p>
+    </div>
+
+    <div class="card dept">
+      <h3>Хірургічний цикл <img src="icons/general-surgery.png" class="icon"></h3>
+      <p>Щось про хірургію</p>
+    </div>
       </div>
     </div>
   </section>
@@ -254,8 +266,8 @@
         <div class="card box">
           <h3>Корисна інформація</h3>
           <ul class="list">
-            <li>Запис на ВЛК</li>
-            <li>Запис на прийом</li>
+            <li>Як пройти ВЛК</li>
+            <li>Як записатись на прийом</li>
             <li>Як взяти направлення</li>
             <li>Ще там щось</li>
           </ul>
@@ -271,7 +283,7 @@
       <h2>Контакти</h2>
       <div class="grid-3">
         <div class="card">
-          <h3 style="margin-top:0">Запис</h3>
+          <h3 style="margin-top:0">Запис<img src="icons/calendar.png" class="icon"></h3>
           <div class="contact-list">
             <div><strong>Черговий</strong>: 
                 <ul class="list">
@@ -293,7 +305,7 @@
           </div>
         </div>
         <div class="card">
-            <h3 style="margin-top:0">Інформація</h3>
+            <h3 style="margin-top:0">Інформація<img src="icons/i-documents_accepted.png" class="icon"></h3>
             <div class="contact-list">
                  <div><strong>Цивільно-військове співробіцнитво:</strong>
                 <ul class="list">
@@ -308,7 +320,7 @@
             </div>
             </div>
         <div class="card">
-          <h3 style="margin-top:0">Інше</h3>
+          <h3 style="margin-top:0">Інше<img src="icons/communication.png" class="icon"></h3>
           <div><strong>Facebook:</strong>
             <div class="contact-list">
                 <a href="https://www.facebook.com/hospital.dnipro">Сторінка на Facebook</a>
