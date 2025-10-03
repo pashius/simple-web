@@ -31,7 +31,33 @@
     font-size:.92rem;
   }
   .container{max-width:1100px; margin:0 auto; padding:0 16px}
-  .topbar .container{display:flex; gap:16px; align-items:center; justify-content:space-between}
+  .topbar .container{
+  display:flex;
+  gap:16px;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:nowrap;   /* desktop default */
+}
+
+@media (max-width:760px){
+  .topbar .container{
+    flex-wrap:wrap;       /* allow multiple rows */
+    row-gap:8px;
+  }
+  .topbar .left{
+    flex:1 1 100%;
+    order:1;              /* second line: address */
+    justify-content:center;
+  }
+  .topbar .right{
+    flex:1 1 100%;
+    order:0;              /* first line: phone */
+    justify-content:center;
+  }
+  .btn-fb{
+    order:0;              /* keep facebook left */
+  }
+}
   .topbar .left, .topbar .right{display:flex; gap:16px; align-items:center; flex-wrap:wrap}
   .btn-fb{
     display:inline-flex; align-items:center; gap:8px;
@@ -45,7 +71,7 @@
     background:#fff; position:sticky; top:0; z-index:30; border-bottom:1px solid #eef2f7;
   }
   .nav{
-    display:flex; align-items:center; justify-content:space-between; padding:14px 0;
+    display:flex; align-items:center;                    justify-content:space-between; padding:14px 0; flex-wrap:nowrap
   }
   .brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--ink)}
   .logo {
@@ -61,11 +87,30 @@
     text-decoration:none; color:var(--ink); padding:10px 14px; border-radius:10px; font-weight:600;
   }
   nav a:hover{background:var(--accent)}
-  @media (max-width:760px){
-    nav{display:flex; gap:6px}
-    nav a{padding:8px 10px}
-    .name{display:none}
+ @media (max-width:760px){
+  .nav{
+    flex-wrap:wrap;
+    row-gap:8px;
   }
+  .brand{
+    flex:1 1 100%;
+    order:0;          /* first line: logo */
+  }
+  nav{
+    flex:1 1 100%;
+    order:1;          /* second line: menu */
+    display:flex;
+    justify-content:space-between;
+    gap:6px;
+    flex-wrap:wrap;   /* allow wrapping if needed */
+  }
+  nav a{
+    padding:8px 10px;
+    flex:1 1 auto;    /* optional: let items stretch evenly */
+    text-align:center;
+  }
+  .name{display:none}
+}
 
   /* Hero / About */
   .hero{
@@ -196,10 +241,10 @@
       <div class="info">
         <div class="card box">
           <p><strong>Адреса:</strong> м. Дніпро, вул. Старокозацька 63</p>
-          <p><strong>Працюємо: 09:00–18:00</strong></p>
+          <p><strong>Працюємо щодня, 09:00–18:00</strong></p>
           </ul>
           <h4>Попередній запис</h4>
-          <ol class="list">
+          <ol class="contact-list">
             <li>Подзвоніть <a href="tel:+380567207069">+380567207069</a>.</li>
             <li>Домовтесь про дату та час прийому.</li>
             <li>З’явіться за 15хв до прийому з усіма документами.</li>
