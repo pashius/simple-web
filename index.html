@@ -188,6 +188,37 @@
 
   /* Anchors offset for sticky header */
   .anchor{position:relative; top:-70px; visibility:hidden}
+
+    /* Review form buttons and stuff */
+
+  .feedback-wrap{
+  display:flex;
+  justify-content:center;
+  margin:20px 0;
+    }
+
+  .btn-feedback{
+  font-size:1.2rem;
+  padding:1rem 2rem;
+  border-radius:14px;
+  border:none;
+  background:var(--brand);
+  color:#fff;
+  cursor:pointer;
+  transition:transform .2s ease, filter .2s ease;
+  }
+
+.btn-feedback:hover{
+  filter:brightness(1.1);
+  transform:scale(1.05);
+}
+
+  .feedback{
+    margin-top:12px; background:var(--card); border:1px solid #eef3f6;
+    border-radius:var(--radius); box-shadow:var(--shadow);
+    padding:16px; overflow:hidden; transition:max-height .3s ease;
+  }
+
 </style>
 </head>
 <body>
@@ -361,6 +392,15 @@
     </div>
     
   </section>
+   <span class="form">
+    <section>
+      
+      <div class="feedback-wrap">
+        <a href="https://forms.gle/7jLYAMLS3YYKwC868"><button id="feedbackBtn" class="btn-feedback">Анонімний відгук</button></a>
+      </div>
+    
+    </section>
+  </span>
 </main>
 
 <footer>
