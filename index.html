@@ -73,7 +73,9 @@
     justify-content:center;
   }
   .btn-fb{
-    order:0;              /* keep facebook left */
+    order:0;   
+      display:flex;
+  align-items:center;           /* keep facebook left */
   }
 }
   .topbar .left, .topbar .right{display:flex; gap:16px; align-items:center; flex-wrap:wrap}
@@ -93,8 +95,8 @@
   }
   .brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--ink)}
   .logo {
-  height: 80px;
-  width: 250px;
+  height: 90px;
+  width: 277px;
   background: url("vmkts-shr-full.png") center/cover no-repeat;
   display: grid;
   place-items: center;
@@ -199,8 +201,7 @@
     </div>
     <div class="right">
       <a class="btn-fb" href="https://www.facebook.com/hospital.dnipro" aria-label="Facebook">
-        <!-- simple F -->
-        <strong>f</strong><span>Facebook</span>
+        <span style="display:inline-flex; align-items:center; gap:4px;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/1024px-2023_Facebook_icon.svg.png" height="16px"> Facebook</span>
       </a>
     </div>
   </div>
@@ -303,12 +304,6 @@
         <div class="card">
           <h3 style="margin-top:0">Запис<img src="icons/calendar.png" class="icon"></h3>
           <div class="contact-list">
-            <div><strong>Черговий</strong>: 
-                <ul class="list">
-                    <li><a href="tel:+380567207068">+380567207068</a></li>
-                    <li><a href="tel:+380677251350">+380677251350</a></li>
-                </ul>
-            </div>
             <div><strong>Приймальне відділення:</strong>
                 <ul class="list">
                     <li><a href="tel:+380567207069">+380567207069</a></li>
@@ -325,6 +320,12 @@
         <div class="card">
             <h3 style="margin-top:0">Інформація<img src="icons/i-documents_accepted.png" class="icon"></h3>
             <div class="contact-list">
+                <div><strong>Черговий</strong>: 
+                <ul class="list">
+                    <li><a href="tel:+380567207068">+380567207068</a></li>
+                    <li><a href="tel:+380677251350">+380677251350</a></li>
+                </ul>
+                </div>
                  <div><strong>Цивільно-військове співробіцнитво:</strong>
                 <ul class="list">
                     <li><a href="tel:+380502585836">+380502585836</a></li>
